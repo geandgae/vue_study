@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <v-btn>
+      Button
+    </v-btn>
     <v-main>
       <HelloWorld/>
     </v-main>
