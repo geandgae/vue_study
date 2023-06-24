@@ -1,6 +1,8 @@
 <template>
   <v-container>
     <v-row class="text-center">
+      <v-btn @click="alertShow(this.opt)">alert</v-btn>
+
       <v-col cols="12">
         <v-img
           :src="require('../assets/logo.svg')"
@@ -96,8 +98,9 @@
 
 export default {
   name: 'HelloWorld',
-
+  props: ['alert'],
   data: () => ({
+    opt: "page1에서 실행한다",
     ecosystem: [
       {
         text: 'vuetify-loader',
@@ -145,5 +148,11 @@ export default {
       },
     ],
   }),
+  methods: {
+    alertShow(val) {
+      this.$emit('alertUpdate', val);
+      // console.log(val);
+    },
+  },
 }
 </script>

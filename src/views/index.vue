@@ -6,19 +6,22 @@
       <li @click="link('SecondView')">page2</li>
       <li @click="link('user')">user</li>
     </ul>
+    <v-btn @click="alertShow(this.opt)">alert</v-btn>
   </v-container>
 </template>
 
 <script>
 export default {
   name: "IA",
-  // props: ['bread'],
+  props: ['bread', 'alert'],
   data: () => ({
     path: "",
+    opt: "인데스에서 실행한다",
   }),
   mounted() {
-    // console.log(this.bread);
-    // this.bread = ['ge', 'list'];
+    console.log(this.alert);
+    // this.bread = [];
+    // this.update('list');
   },
   methods: {
     link(val) {
@@ -29,6 +32,10 @@ export default {
       });
       // this.$router.replace(val)
       // this.$router.go(-1)
+    },
+    alertShow(val) {
+      this.$emit('alertUpdate', val);
+      // console.log(val);
     },
   },
 };

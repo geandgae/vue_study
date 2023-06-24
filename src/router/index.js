@@ -1,17 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // 연결할 각 컴포넌트 import (src/views폴더 아래 컴포넌트들 생성해둠)
-import Index from "../views/index";
 import Layout from "@/components/layout";
-import FirstView from "../views/FirstView";
-import SecondView from "../views/SecondView";
+import Index from "@/views/index";
+import FirstView from "@/views/FirstView";
+import SecondView from "@/views/SecondView";
 
 
-const User = {
+const Users = {
   template: `
     <div class="user">
-      <h2>User {{ $route.params.id }}</h2>
-      <router-view></router-view>
+      <h2>User</h2>
     </div>
   `
 }
@@ -24,7 +23,7 @@ const routes = [
       { path: 'list', component: Index },
       { path: "FirstView", component: FirstView },
       { path: "SecondView", component: SecondView },
-      { path: "user", component: User },
+      { path: "user", component: Users },
     ]
   },
   { path: "/", component: Index },

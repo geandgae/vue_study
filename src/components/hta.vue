@@ -49,7 +49,7 @@
 <script>
 export default {
   name: "HTA",
-  // props: ['bread'],
+  props: ['bread'],
   data: () => ({
     drawer: false,
     group: null,
@@ -75,12 +75,16 @@ export default {
         value: "/ge/user",
       },
     ],
-    locations: ['ge']
+    locations: ['ge', 'ge',]
   }),
   watch: {
     group() {
       this.drawer = false;
     },
+  },
+  mounted() {
+    // console.log(this.bread);
+    // this.bread = ['ge', 'list'];
   },
   methods: {
     link(val) {
