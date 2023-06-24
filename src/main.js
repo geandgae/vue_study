@@ -8,6 +8,8 @@ import { router } from './router/index.js'
 
 loadFonts()
 
+
+
 // createApp(App)
 //   .use(vuetify)
 //   .use(router)  // 라우터 사용
@@ -17,3 +19,7 @@ const app = createApp(App)
 app.use(vuetify)
 app.use(router)
 app.mount('#app')
+
+// GlobalComponent
+// import HTA from './components/hta'
+// App.component(HTA.name, HTA)
