@@ -14,7 +14,7 @@ export default {
   name: 'HelloWorld',
   props: ['alert'],
   data: () => ({
-    opt: "page1에서 실행한다",
+    opt: "bong에서 실행한다",
     ecosystem: [
       {
         text: 'vuetify-loader',
