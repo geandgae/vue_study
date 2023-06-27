@@ -5,6 +5,7 @@ import Layout from "@/components/layout";
 import Index from "@/views/index";
 import FirstView from "@/views/FirstView";
 import SecondView from "@/views/SecondView";
+import Bong from "@/views/bong";
 
 
 const Users = {
@@ -24,6 +25,7 @@ const routes = [
       { path: "FirstView", component: FirstView },
       { path: "SecondView", component: SecondView },
       { path: "user", component: Users },
+      { path: "bong", component: Bong },
     ]
   },
   { path: "/", component: Index },

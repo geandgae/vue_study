@@ -3,7 +3,7 @@
     <v-layout>
       <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
 
-      <v-app-bar color="primary" prominent>
+      <v-app-bar color="black" prominent>
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
         <v-toolbar-title>My files</v-toolbar-title>
@@ -73,6 +73,11 @@ export default {
         title: "page3",
         icon: "mdi-email",
         value: "/ge/user",
+      },
+      {
+        title: "bong",
+        icon: "mdi-email",
+        value: "/ge/bong",
       },
     ],
     locations: ['ge', 'ge',]
