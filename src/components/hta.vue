@@ -44,6 +44,7 @@
       </template>
     </v-breadcrumbs>
   </div>
+  <slot name="htaSlot"></slot>
 </template>
 
 <script>
@@ -78,6 +79,11 @@ export default {
         title: "bong",
         icon: "mdi-email",
         value: "/ge/bong",
+      },
+      {
+        title: "user",
+        icon: "mdi-email",
+        value: "/ge/user",
       },
     ],
     locations: ['ge', 'ge',]

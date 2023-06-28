@@ -1,6 +1,12 @@
 <template>
   <v-container>
-    <HTA></HTA>
+    <HTA>
+      <template v-slot:htaSlot>
+        <div>
+          v-slot:htaSlot
+        </div>
+      </template>
+    </HTA>
     <!-- <BC :bread = "locations"></BC> -->
     <v-row class="mt-15">
       layout
@@ -9,6 +15,7 @@
     </v-row>
   </v-container>
   <Alert :alert="alertOpt"></Alert>
+  
 </template>
 
 <script>
