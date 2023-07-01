@@ -43,6 +43,11 @@ const routes = [
         component: () => import("@/views/bong")
       },
       { 
+        path: "modal",
+        name: "modal",
+        component: () => import("@/views/modal")
+      },
+      { 
         path: "user",
         name: "User",
         component: Users 

@@ -81,6 +81,11 @@ export default {
         value: "/ge/bong",
       },
       {
+        title: "modal",
+        icon: "mdi-email",
+        value: "/ge/modal",
+      },
+      {
         title: "user",
         icon: "mdi-email",
         value: "/ge/user",

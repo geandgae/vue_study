@@ -8,3 +8,9 @@ module.exports = defineConfig({
 		}
   }
 })
+// 추가
+module.exports = {
+  chainWebpack: config => {
+    config.module.rules.delete('eslint');
+  }
+}

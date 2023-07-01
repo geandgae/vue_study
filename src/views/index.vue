@@ -7,19 +7,22 @@
       <li @click="link('user')">user</li>
     </ul>
     <v-btn @click="alertShow(this.opt)">alert</v-btn>
+    <v-btn @click="dialogShow(this.opt2)">dialog</v-btn>
   </v-container>
 </template>
 
 <script>
 export default {
   name: "IA",
-  props: ['bread', 'alert'],
+  props: ['bread', 'alert', 'dialog'],
   data: () => ({
     path: "",
     opt: "인데스에서 실행한다",
+    opt2: "dialog 실행한다",
   }),
   mounted() {
-    console.log(this.alert);
+    // console.log(this.alert);
+    // console.log(this.dialog);
     // this.bread = [];
     // this.update('list');
   },
@@ -37,6 +40,18 @@ export default {
       this.$emit('alertUpdate', val);
       // console.log(val);
     },
+    dialogShow(val) {
+      this.$emit('dialogUpdate', val);
+      // console.log(val);
+    },
+    dialogClose (val) {
+      if(val === 'Y') {
+        this.dialogOpt.show = !(this.dialogOpt.show);
+      }
+      if(val === 'N') {
+        // this.dialogOpt.show = !(this.dialogOpt.show);
+      }
+    }
   },
 };
 </script>

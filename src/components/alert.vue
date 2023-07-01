@@ -6,7 +6,8 @@
     title="Alert title"
     :text="alert.text"
     variant="outlined"
-  ></v-alert>
+  >
+  </v-alert>
 </template>
 
 <script>
